@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Guia de destinos turísticos do Brasil" />
+    <title>Destinos do Brasil | Guia de Turismo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="topo">
+        <span class="logo">Destinos do Brasil</span>
+        <ul>
+          <li><a href="#destinos">Destinos</a></li>
+          <li><a href="#dicas">Dicas</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+        </ul>
+      </nav>
+      <div class="hero-texto">
+        <h1>Descubra o Brasil</h1>
+        <p>Praias, florestas, serras e cidades históricas: escolha seu próximo destino.</p>
+        <a class="botao botao-claro" href="#destinos">Explorar destinos</a>
+      </div>
+    </header>
+
+    <main>
+      <section id="destinos" class="secao">
+        <h2>Destinos em destaque</h2>
+        <form class="filtros" role="search">
+          <label>
+            Buscar
+            <input id="busca" type="search" placeholder="Ex.: praia, cachoeira, Bahia..." />
+          </label>
+          <label>
+            Região
+            <select id="regiao"><option value="todas">Todas</option></select>
+          </label>
+          <label>
+            Tipo
+            <select id="tipo"><option value="todos">Todos</option></select>
+          </label>
+        </form>
+        <p id="contador" class="contador" aria-live="polite"></p>
+        <div id="lista-destinos" class="grade"></div>
+      </section>
+
+      <section id="dicas" class="secao secao-alt">
+        <h2>Dicas de viagem</h2>
+        <div class="dicas">
+          <div class="dica">
+            <h3>Planeje a época</h3>
+            <p>Cada região tem seu período de chuva e seca. Confira a melhor época antes de comprar passagens.</p>
+          </div>
+          <div class="dica">
+            <h3>Reserve passeios</h3>
+            <p>Destinos como Bonito e Fernando de Noronha limitam visitantes: reserve com antecedência.</p>
+          </div>
+          <div class="dica">
+            <h3>Turismo responsável</h3>
+            <p>Respeite as trilhas, não deixe lixo e valorize o comércio e os guias locais.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="sobre" class="secao">
+        <h2>Sobre o projeto</h2>
+        <p>
+          Site desenvolvido para o trabalho de DevOps: o código passa por uma pipeline DevSecOps
+          no GitHub Actions (SonarQube + Trivy), é publicado no Docker Hub e implantado em um cluster kind.
+        </p>
+      </section>
+    </main>
+
+    <dialog id="detalhes">
+      <h3></h3>
+      <p class="descricao"></p>
+      <h4>Não deixe de conhecer</h4>
+      <ul></ul>
+      <p><strong>Melhor época:</strong> <span class="epoca"></span></p>
+      <button type="button" class="botao fechar">Fechar</button>
+    </dialog>
+
+    <footer class="rodape">
+      <p>&copy; <span id="ano"></span> Destinos do Brasil · Trabalho de DevOps</p>
+    </footer>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
