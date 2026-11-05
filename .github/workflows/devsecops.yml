@@ -40,8 +40,8 @@ jobs:
       - name: SonarQube Scan + Quality Gate
         uses: SonarSource/sonarqube-scan-action@v8
         env:
-          SONAR_TOKEN: ${{ 5c2f192b785bf8e2e34ccdf8d722a60778ac7858 }}
-          SONAR_HOST_URL: ${{ https://sonarcloud.io }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
         with:
           # qualitygate.wait faz o job FALHAR se o Quality Gate não passar
           args: >
