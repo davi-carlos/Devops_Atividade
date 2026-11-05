@@ -75,3 +75,5 @@ sonar-project.properties configuração do SonarQube
 - Container roda como **não-root**, com sistema de arquivos **somente leitura**, sem capabilities e com limites de CPU e memória. O Trivy config não aponta nenhum achado.
 - `trivy-action` está fixada por **SHA do commit** (v0.36.0). Em março de 2026, as tags dessa action foram sequestradas num ataque de supply chain (CVE-2026-33634), e fixar pelo SHA protege contra isso.
 - Cabeçalhos de segurança no nginx (CSP, X-Frame-Options, nosniff).
+
+.
